@@ -1,0 +1,12 @@
+ua/util/ValidationHelper.class
+ua/util/model/Customer.class
+ua/util/model/PurchaseStatus.class
+ua/util/model/Supplier.class
+ua/util/model/BaseEntity.class
+ua/util/model/Category.class
+ua/util/model/ModelIntrospector.class
+ua/util/Main.class
+ua/util/model/Item.class
+ua/util/model/ItemStatus.class
+ua/util/Utils.class
+ua/util/model/Purchase.class
