@@ -30,6 +30,14 @@ public class Main {
         System.out.println("Item id via protected access: " + idItem1);
         System.out.println("Category id via protected access: " + idCat1);
 
+        System.out.println("Email valid (bad): " + Utils.checkEmail("johnexample.com"));
+
+        try {
+            i1.setPrice(-1);
+        } catch (IllegalArgumentException ex) {
+            System.out.println("Setter validation failed as expected: " + ex.getMessage());
+        }
+
         try {
             Item bad = Item.of("", -5, -1);
             System.out.println(bad);
