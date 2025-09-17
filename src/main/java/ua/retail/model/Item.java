@@ -1,4 +1,4 @@
-package ua.util.model;
+package ua.retail.model;
 
 import java.util.Objects;
 

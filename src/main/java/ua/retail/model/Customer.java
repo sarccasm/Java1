@@ -1,3 +1,3 @@
-package ua.util.model;
+package ua.retail.model;
 
 public record Customer(String firstName, String lastName, String email) { }

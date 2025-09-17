@@ -1,7 +1,9 @@
-package ua.util;
+package ua.retail.model;
 
-public class Utils {
+public final class Utils {
+    private Utils() {}
     public static boolean checkEmail(String email) {
         return ValidationHelper.isValidEmail(email);
     }
 }
+ 

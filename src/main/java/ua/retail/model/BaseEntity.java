@@ -1,4 +1,4 @@
-package ua.util.model;
+package ua.retail.model;
 
 public abstract class BaseEntity {
     protected static long seq = 0;

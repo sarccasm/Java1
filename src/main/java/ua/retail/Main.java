@@ -1,6 +1,6 @@
-package ua.util;
+package ua.retail;
 
-import ua.util.model.*;
+import ua.retail.model.*;
 import java.util.List;
 
 public class Main {
@@ -15,8 +15,6 @@ public class Main {
         Purchase purchase = new Purchase(cust, List.of(i1, i2));
         purchase.complete();
 
-        boolean directEmailCheck = ValidationHelper.isValidEmail(cust.email());
-
         long idItem1 = ModelIntrospector.peekId(i1);
         long idCat1  = ModelIntrospector.peekId(c1);
 
@@ -26,23 +24,14 @@ public class Main {
         System.out.println(supp);
         System.out.println(purchase);
         System.out.println("Email valid via Utils?  " + Utils.checkEmail(cust.email()));
-        System.out.println("Email valid directly?   " + directEmailCheck);
         System.out.println("Item id via protected access: " + idItem1);
         System.out.println("Category id via protected access: " + idCat1);
 
         System.out.println("Email valid (bad): " + Utils.checkEmail("johnexample.com"));
+        try { i1.setPrice(-1); }
+        catch (IllegalArgumentException ex) { System.out.println("Setter validation failed as expected: " + ex.getMessage()); }
 
-        try {
-            i1.setPrice(-1);
-        } catch (IllegalArgumentException ex) {
-            System.out.println("Setter validation failed as expected: " + ex.getMessage());
-        }
-
-        try {
-            Item bad = Item.of("", -5, -1);
-            System.out.println(bad);
-        } catch (IllegalArgumentException ex) {
-            System.out.println("Validation failed as expected: " + ex.getMessage());
-        }
+        try { Item bad = Item.of("", -5, -1); System.out.println(bad); }
+        catch (IllegalArgumentException ex) { System.out.println("Validation failed as expected: " + ex.getMessage()); }
     }
 }

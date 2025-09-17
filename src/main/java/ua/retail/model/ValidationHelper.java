@@ -1,6 +1,7 @@
-package ua.util;
+package ua.retail.model;
 
-class ValidationHelper {
+final class ValidationHelper {
+    private ValidationHelper() {}
     static boolean isValidEmail(String email) {
         return email != null && email.contains("@");
     }

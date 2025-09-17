@@ -1,3 +1,3 @@
-package ua.util.model;
+package ua.retail.model;
 
 public record Supplier(String name, String contactInfo) { }

@@ -1,4 +1,4 @@
-package ua.util.model;
+package ua.retail.model;
 
 import java.time.LocalDate;
 import java.util.List;

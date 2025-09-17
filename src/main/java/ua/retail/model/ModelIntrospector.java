@@ -1,4 +1,4 @@
-package ua.util.model;
+package ua.retail.model;
 
 public class ModelIntrospector {
     public static long peekId(BaseEntity e) {

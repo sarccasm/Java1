@@ -1,3 +1,3 @@
-package ua.util.model;
+package ua.retail.model;
 
 public enum PurchaseStatus { PENDING, COMPLETED, RETURNED }

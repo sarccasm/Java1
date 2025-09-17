@@ -1,4 +1,4 @@
-package ua.util.model;
+package ua.retail.model;
 
 public class Category extends BaseEntity {
     private String name;
